@@ -1,0 +1,58 @@
+/*!
+ Theme Name:   Heidi
+ Theme URI:    http://themehoney.com
+ Description:  A Genesis Starter Theme
+ Author:       Angela J. Holden
+ Author URI:   https://angelajholden.com
+ Template:     genesis
+ Version:      1.0.0
+ License:      GNU General Public License v3 or later
+ License URI:  http://www.gnu.org/licenses/gpl-3.0.html
+ Text Domain:  heidi
+*/
+
+// Get Started
+@import "mixins";
+@import "normalize";
+
+// Fonts
+@import "fontawesome";
+
+// Base
+@import "base";
+
+// Genesis Styles
+@import "genesis/clearfix";
+@import "genesis/avatar";
+@import "genesis/comments";
+@import "genesis/content";
+@import "genesis/feat-content";
+@import "genesis/footer";
+@import "genesis/forms";
+@import "genesis/gallery";
+@import "genesis/genesis-plugins";
+@import "genesis/genesis";
+@import "genesis/images";
+@import "genesis/menu";
+@import "genesis/objects";
+@import "genesis/screen-reader-text";
+@import "genesis/search-form";
+@import "genesis/sidebar";
+@import "genesis/skip-links";
+@import "genesis/structure-layout";
+@import "genesis/tables";
+@import "genesis/titles";
+@import "genesis/widgets";
+@import "genesis/print";
+
+// Custom Styles
+@import "header";
+@import "homepage";
+@import "typography";
+
+// Plugins
+@import "fancybox";
+
+// Media Queries
+@import "genesis/media-queries";
+@import "media";

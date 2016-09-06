@@ -1,0 +1,45 @@
+/* ## Comments
+--------------------------------------------- */
+
+.comment-respond,
+.entry-comments,
+.entry-pings {
+	margin-bottom: 60px;
+}
+
+.comment-header {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.comment-content {
+	clear: both;
+	word-wrap: break-word;
+}
+
+.comment-list li {
+	padding: 32px 0 0 32px;
+}
+
+.comment-list li.depth-1 {
+	padding-left: 0;
+}
+
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+	width: 50%;
+}
+
+.comment-respond label {
+	display: block;
+	margin-right: 12px;
+}
+
+.entry-comments .comment-author {
+	margin-bottom: 0;
+}
+
+.entry-pings .reply {
+	display: none;
+}
