@@ -5,19 +5,10 @@ module.exports = function(grunt) {
 		* Sass Task
 		*/
 		sass: {
-			dev: {
-				options: {
-					style: 'compact',
-					sourcemap: 'none',
-				},
-				files: {
-					'compiled/style-compact.css': 'scss/style.scss'
-				}
-			},
 			dist: {
 				options: {
 					style: 'compressed',
-					sourcemap: 'none',
+					sourcemap: 'auto',
 				},
 				files: {
 					'compiled/style.css': 'scss/style.scss'
@@ -55,9 +46,9 @@ module.exports = function(grunt) {
 		*/
 		autoprefixer: {
 			options: {
-				browsers: ['last 2 versions']
+				browsers: ['last 2 versions'],
+				map: true,
 			},
-			// prefix all files
 			multiple_files: {
 				expand: true,
 				flatten: true,
