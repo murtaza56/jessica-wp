@@ -1,5 +1,17 @@
-/* ## Base Theme Honey Styles
---------------------------------------------- */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
 
 html {
   -ms-text-size-adjust: 100%;
@@ -13,20 +25,25 @@ html {
 
 body {
 	position: relative;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  font-size: 100%;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000;
-  background: #fff;
+	background-color: #fff;
+	font-family: $font-family;
+	font-size: 100%;
+	line-height: 1.5;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
 }
 
 .wrap {
-	max-width: 1200px;
+	max-width: $width;
 	margin: 0 auto;
-	padding: 100px 16px;
+	padding: 3.5em 0;
+	@media(max-width: 1290px) {
+		padding: 3.5em 10px;
+	}
+	@media(max-width: 768px) {
+		padding: 1.5em 10px;
+	}
 }
 
 .screen-reader-text {
@@ -43,44 +60,4 @@ body {
 	content: "";
 	display: table;
 	clear: both;
-}
-
-hr {
-	height: 0;
-	border-top: none;
-	border-left: none;
-	border-right: none;
-	border-bottom: 2px dotted #eaeaea;
-	margin: 5em 0;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-	display: block;
-}
-
-.scroll-top {
-  display: none;
-  position: fixed;
-  bottom: 1em;
-  right: 1em;
-  width: 2.5em;
-  height: 2.5em;
-  line-height: 2;
-  font-size: 1.25em;
-  color: white;
-  background: blue;
-  border-bottom: none;
-  text-decoration: none;
-  text-align: center;
-  cursor: pointer;
-  z-index: 1;
-  box-shadow: 0 0 0.0625em rgba(0,0,0,0.25);
-  &:hover {
-  	opacity: 1;
-  	text-decoration: none;
-  	color: white;
-  	border-bottom: none;
-  }
 }

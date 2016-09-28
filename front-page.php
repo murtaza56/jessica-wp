@@ -18,10 +18,10 @@ function homepage_slider() {
 }
 
 // Static Hero
-add_action('genesis_after_header', 'homepage_hero');
-function homepage_hero() {
-	get_template_part('includes/home', 'hero');
-}
+//add_action('genesis_after_header', 'homepage_hero');
+//function homepage_hero() {
+//	get_template_part('includes/home', 'hero');
+//}
 
 // Homepage content and layout
 add_action('genesis_before_content_sidebar_wrap', 'homepage_content');

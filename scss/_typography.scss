@@ -1,2 +1,15 @@
-/* ## Typography
---------------------------------------------- */
+a {
+	color: $primary;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: all 0.3s ease;
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		border-bottom: 2px solid $primary;
+	}
+}
+
+p {
+	color: $gray;
+	margin: 0 0 1em;
+}

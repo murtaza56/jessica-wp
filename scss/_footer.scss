@@ -1,0 +1,92 @@
+footer {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	.footer-1 {
+		border-top: 1px solid $gray-light;
+	}
+	.footer-2 {
+		text-align: center;
+		border-top: 1px solid $gray-light;
+	}
+	.foot-col {
+		width: 25%;
+		float: left;
+		padding-right: 1em;
+	}
+	.widget {
+		ul li {
+			line-height: 1.25;
+			margin-bottom: 0.65em;
+			a span {
+				color: $gray-med;
+			}
+		}
+		.instagram {
+			li {
+				display: inline-block;
+				line-height: 1;
+				margin: 0 10px 7px 0;
+			}
+			a {
+				display: block;
+				&:hover, &:active, &:focus {
+					border-bottom: transparent;
+				}
+			}
+		}
+		.social-foot {
+			li {
+				display: inline-block;
+				line-height: 1;
+				margin: 0;
+				a {
+					&:hover, &:active, &:focus {
+						border-bottom: transparent;
+					}
+					.fa {
+						color: $gray;
+						text-align: center;
+						width: 35px;
+						height: 35px;
+						line-height: 35px;
+						border: 1px solid $gray-light;
+						border-radius: 50%;
+						transition: all 0.3s ease;
+					}
+					@include brand-colors;
+				}
+			}
+		}
+		.widgettitle {
+			text-transform: uppercase;
+			font-weight: 400;
+			margin: 1.5em 0;
+			letter-spacing: 2px;
+		}
+	}
+}
+
+@media(max-width: 1024px) {
+	footer {
+		.foot-col {
+			width: 50%;
+			padding-right: 2em;
+			&:nth-child(3) {
+				clear: both;
+			}
+		}
+	}
+}
+
+@media(max-width:768px) {
+	footer {
+		.foot-col {
+			width: 100%;
+			float: none;
+			padding: 0;
+		}
+	}
+}

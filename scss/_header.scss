@@ -1,3 +1,86 @@
-/* ## Header
---------------------------------------------- */
+.site-header {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	.wrap {
+		position: relative;
+		padding: 1em 0 0;
+	}
+}
 
+.header-widget-area {
+	position: absolute;
+	top: 1em;
+	right: 0;
+}
+
+.social-head {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	li {
+		display: inline-block;
+	}
+	a {
+		&:hover, &:active, &:focus {
+			border-bottom: 2px solid transparent;
+		}
+	}
+	a span {
+		color: #ccc;
+		margin: 0 7.5px;
+		transition: all 0.3s ease;
+		@media(max-width: 1024px) {
+			margin: 0 5px;
+		}
+	}
+	@include brand-colors;
+	@media(max-width: 1024px) {
+		top: 0.75em;
+	}
+	@media(max-width: 768px) {
+		position: static;
+		text-align: center;
+		margin: 0 0 1em;
+	}
+}
+
+.site-title-logo {
+	display: block;
+	width: 225px;
+	margin: 0 auto;
+	border-bottom: none;
+	&:hover, &:active, &:focus {
+		border-bottom: none;
+	}
+	img {
+		display: block;
+		width: 225px;
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.site-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 2.25em;
+	font-weight: 400;
+	letter-spacing: 2px;
+	margin: 0;
+	line-height: 1.4;
+	a {
+		border-bottom: none;
+		&:hover, &:active, &:focus {
+			border-bottom: none;
+		}
+	}
+}
+
+.site-description {
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.9em;
+	margin: 1em 0;
+}

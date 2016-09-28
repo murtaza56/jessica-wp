@@ -1,13 +1,68 @@
-// Descriptive Variables
-$white: #ffffff;
+// Generic Colors
+$gray-light: #eaeaea;
+$gray-med: #cccccc;
+$gray-dark: #333333;
+$gray: #555;
+
 $black: #000000;
+$white: #ffffff;
 
-$eggshell: #f5f5f5;
-$lt-gray: #eaeaea;
+// Branding
+$facebook: #3b5998;
+$linkedin: #0077b5;
+$instagram: #3f729b;
+$twitter: #55acee;
+$google: #dd4b39;
+$pinterest: #cc2127;
 
-$gray-3: #333;
-$gray-5: #555;
+// Descriptive Variables
+$salmon: #f29377;
+$wisteria: #8e44ad;
+$belize: #2980b9;
+$pomegranate: #e74c3c;
+$greensea: #16a085;
+$purple: #67629C;
+
+// Functional Variables
+$primary: $greensea;
+$primary-light: lighten($greensea, 7.5%);
+$primary-dark: darken($greensea, 12.5%);
+
+//$secondary:
+//$secondary-light:
+//$secondary-dark:
+
+// Branding Mixin
+@mixin brand-colors {
+	.fa-facebook {
+		&:hover, &:active, &:focus {
+			color: $facebook;
+		}
+	}
+	.fa-twitter {
+		&:hover, &:active, &:focus {
+			color: $twitter;	
+		}
+	}
+	.fa-google-plus {
+		&:hover, &:active, &:focus {
+			color: $google;	
+		}
+	}
+	.fa-instagram {
+		&:hover, &:active, &:focus {
+			color: $instagram;	
+		}
+	}
+	.fa-envelope {
+		&:hover, &:active, &:focus {
+			color: $primary;
+		}
+	}
+}
 
 // Typography
-$sans-serif: 'Arial', sans-serif;
-$serif: 'Times New Roman', serif;
+$font-family: 'Tinos', 'Times New Roman', 'serif';
+
+// Layout
+$width: 1270px;
