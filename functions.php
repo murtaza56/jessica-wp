@@ -22,7 +22,9 @@ load_child_theme_textdomain('jessica');
  * @since 1.0.0
  */
 add_action ('genesis_setup', 'jessica_setup', 15);
+
 function jessica_setup() {
+
 	//* Define theme constants
 	define( 'Child_Theme_Name', __( 'Jessica', 'jessica' ) );
 	define( 'Child_Theme_Url', 'https://themehoney.com' );
@@ -71,9 +73,13 @@ function jessica_setup() {
 	//* Layout
 	include_once (get_stylesheet_directory() . '/layout/layout.php');
 
+	//* Slider
+	include_once (get_stylesheet_directory() . '/cpt/slider.php');
+
 	//* Customizer
 	include_once (get_stylesheet_directory() . '/customizer/customizer.php');
 
+	//* Title & Logo
 	remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
 	add_action( 'genesis_site_title', 'jessica_site_title' );
 	function jessica_site_title() {
@@ -107,3 +113,41 @@ if (!is_admin()) {
 	}
 }
 add_action("wp_enqueue_scripts", "jessica_scripts_styles", 11);
+
+//* Show Featured Images in Admin
+function ajh_get_featured_image($post_ID) {
+  $post_thumbnail_id = get_post_thumbnail_id($post_ID);
+  if ($post_thumbnail_id) {
+      $post_thumbnail_img = wp_get_attachment_image_src($post_thumbnail_id, 'thumbnail');
+    return $post_thumbnail_img[0];
+  }
+}
+function ajh_columns_head($defaults) {
+  $defaults['featured_image'] = 'Images';
+	return $defaults;
+}
+function ajh_columns_content($column_name, $post_ID) {
+  if ($column_name == 'featured_image') {
+      $post_featured_image = ajh_get_featured_image($post_ID);
+    if ($post_featured_image) {
+        echo '<img src="' . $post_featured_image . '" />';
+    }
+  }
+}
+add_filter('manage_posts_columns', 'ajh_columns_head');
+add_action('manage_posts_custom_column', 'ajh_columns_content', 10, 2);
+add_filter('manage_pages_columns', 'ajh_columns_head');
+add_action('manage_pages_custom_column', 'ajh_columns_content', 10, 2);
+
+//* Show Image Dimensions in Media Library
+function wh_column( $cols ) {
+  $cols["dimensions"] = "Dimensions (w, h)";
+  return $cols;
+}
+function wh_value( $column_name, $id ) {
+  $meta = wp_get_attachment_metadata($id);
+     if(isset($meta['width']))
+     echo $meta['width'].' x '.$meta['height'];
+}
+add_filter( 'manage_media_columns', 'wh_column' );
+add_action( 'manage_media_custom_column', 'wh_value', 10, 2 );
