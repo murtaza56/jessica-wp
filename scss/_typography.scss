@@ -6,6 +6,7 @@ a {
 	&:hover, &:active, &:focus {
 		text-decoration: none;
 		border-bottom: 2px solid $primary;
+		outline: none;
 	}
 }
 

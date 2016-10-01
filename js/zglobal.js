@@ -20,6 +20,7 @@ $(function() {
     	speed: 750,
     	timeout: 5000,
     	pager: true,
+    	nav: true,
     });
 });
 
