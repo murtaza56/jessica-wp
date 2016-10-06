@@ -56,8 +56,6 @@ function jessica_setup() {
 	//* Remove .wrap by omitting from the array
 	add_theme_support( 'genesis-structural-wraps', array( 
 		'header', 
-		//'menu-primary', 
-		'menu-secondary', 
 		'footer-widgets', 
 		'footer' 
 	) );
@@ -70,14 +68,20 @@ function jessica_setup() {
 	//* Unregister secondary sidebar
 	unregister_sidebar( 'sidebar-alt' );
 
-	//* Layout
-	include_once (get_stylesheet_directory() . '/layout/layout.php');
+	//* Unregister secondary navigation menu
+	add_theme_support( 'genesis-menus', array( 'primary' => __( 'Primary Navigation Menu', 'genesis' ) ) );
 
 	//* Slider
 	include_once (get_stylesheet_directory() . '/cpt/slider.php');
 
 	//* Customizer
 	include_once (get_stylesheet_directory() . '/customizer/customizer.php');
+
+	//* Shortcodes
+	include_once (get_stylesheet_directory() . '/shortcodes/shortcodes.php');
+
+	//* Widgets
+	include_once (get_stylesheet_directory() . '/widgets/widgets.php');
 
 	//* Title & Logo
 	remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
@@ -92,6 +96,15 @@ function jessica_setup() {
 				<a href="<?php bloginfo('url'); ?>"><?php bloginfo( 'name' ); ?></a>
 			</div>
 		<?php endif;
+	}
+
+	// Filter the Footer
+	remove_action( 'genesis_footer', 'genesis_do_footer' );
+	add_action( 'genesis_footer', 'jessica_custom_footer' );
+	function jessica_custom_footer() {
+		?>
+		<p class="copyright">Copyright <?php echo date('Y'); ?> &copy; <?php bloginfo('title'); ?></p>
+		<?php
 	}
 
 }
