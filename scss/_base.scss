@@ -34,18 +34,6 @@ body {
 	padding: 0;
 }
 
-.wrap {
-	max-width: $width;
-	margin: 0 auto;
-	padding: 3.5em 0;
-	@media(max-width: 1290px) {
-		padding: 3.5em 10px;
-	}
-	@media(max-width: 768px) {
-		padding: 1.5em 10px;
-	}
-}
-
 .screen-reader-text {
 	position: absolute;
 	top: -9999px;
