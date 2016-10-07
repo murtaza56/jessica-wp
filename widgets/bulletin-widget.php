@@ -27,7 +27,7 @@ class Bulletin_Text_Widget extends WP_Widget {
 						<p><?php echo $text; ?></p>
 					</div>
 				</aside>
-			<? 
+			<?php
 	}
 	public function form( $instance ) {
 		// Set default values
