@@ -3,7 +3,7 @@
 genesis_register_sidebar( array(
 	'id'		=> 'homepage-bulletin',
 	'name'	=> __('Homepage Bulletin', 'jessica'),
-	'description'		=> __('Use this widget area to create your Homepage Bulletin.', 'jessica'),
+	'description'		=> __('Create a Homepage Bulletin', 'jessica'),
 	)
 );
 // Bulletin Widget
@@ -13,7 +13,7 @@ class Bulletin_Text_Widget extends WP_Widget {
 			'bulletin_text_widget',
 			__( 'Homepage Bulletin', 'jessica' ),
 			array(
-				'description' => __( 'Use this widget to add a bulletin to your homepage.', 'jessica' ),
+				'description' => __( 'Add a Bulletin to the homepage.', 'jessica' ),
 				'classname'   => 'bulletin_widget',
 			)
 		);

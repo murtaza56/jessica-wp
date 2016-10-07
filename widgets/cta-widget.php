@@ -3,7 +3,7 @@
 genesis_register_sidebar( array(
 	'id'		=> 'homepage-cta',
 	'name'	=> __('Homepage Call to Action', 'jessica'),
-	'description'		=> __('Use this widget area to create your Homepage Call to Action.', 'jessica'),
+	'description'		=> __('Create a Homepage Call to Action', 'jessica'),
 	)
 );
 // Call to Action Widget
@@ -13,7 +13,7 @@ class Call_to_Action extends WP_Widget {
 			'calltoaction',
 			__( 'Homepage Call to Action', 'jessica' ),
 			array(
-				'description' => __( 'This is the Call to Action for the Homepage.', 'jessica' ),
+				'description' => __( 'Add a Call to Action to the Homepage.', 'jessica' ),
 				'classname'   => 'call-to-action',
 			)
 		);
