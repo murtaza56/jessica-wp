@@ -3,7 +3,7 @@
 genesis_register_sidebar( array(
 	'id'		=> 'homepage-icons',
 	'name'	=> __('Homepage Icons', 'jessica'),
-	'description'		=> __('Create Homepage Icon Textareas - These should be added in groups of three', 'jessica'),
+	'description'		=> __('Create Homepage Icon Textareas - These should be added in groups of three.', 'jessica'),
 	)
 );
 class Homepage_Icon extends WP_Widget {
