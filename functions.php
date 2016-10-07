@@ -77,9 +77,6 @@ function jessica_setup() {
 	//* Customizer
 	include_once (get_stylesheet_directory() . '/customizer/customizer.php');
 
-	//* Shortcodes
-	include_once (get_stylesheet_directory() . '/shortcodes/shortcodes.php');
-
 	//* Widgets
 	include_once (get_stylesheet_directory() . '/widgets/bulletin-widget.php');
 	include_once (get_stylesheet_directory() . '/widgets/icon-widget.php');
