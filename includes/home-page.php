@@ -1,8 +1,11 @@
-<section class="home-icons clearfix">
-	<div class="wrap">
-		<?php the_content(); ?>
-	</div>
-</section>
+<?php if ( is_active_sidebar( 'homepage-bulletin' ) || is_active_sidebar( 'homepage-icons' ) ) : ?>
+	<section class="home-icons clearfix">
+		<div class="wrap">
+			<?php dynamic_sidebar( 'homepage-bulletin' ); ?>
+			<?php dynamic_sidebar( 'homepage-icons' ); ?>
+		</div>
+	</section>
+<?php endif; ?>
 
 <?php if ( is_active_sidebar( 'homepage-cta' ) ) : dynamic_sidebar( 'homepage-cta' ); endif; ?>
 
