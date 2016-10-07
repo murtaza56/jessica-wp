@@ -12,6 +12,14 @@
 	position: absolute;
 	top: 1em;
 	right: 0;
+	h3.widget-title {
+		position: absolute;
+		clip: rect(0, 0, 0, 0);
+		height: 1px;
+		width: 1px;
+		border: 0;
+		overflow: hidden;
+	}
 }
 
 .social-head {

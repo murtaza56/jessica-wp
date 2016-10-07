@@ -1,12 +1,17 @@
-.home-blurb {
-	font-size: 1.25em;
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 2px;
+.home-icons {
 	.wrap {
-		padding: 75px 0 50px;
-		margin: 0 auto 50px;
-		border-bottom: 1px solid $gray-light;
+		padding: 75px 0 calc(75px - 1em);
+	}
+	.home-blurb {
+		font-size: 1.25em;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		.wrap {
+			padding: 0 0 50px;
+			margin: 0 auto 50px;
+			border-bottom: 1px solid $gray-light;
+		}
 	}
 }
 
@@ -37,7 +42,6 @@
 .home-cta {
 	background: $primary;
 	color: $white;
-	margin: 50px 0;
 	.wrap {
 		padding: 35px 0;
 	}
@@ -78,6 +82,9 @@
 
 .home-recent-posts {
 	clear: both;
+	.wrap {
+		padding: 50px 0 0;
+	}
 	h2 {
 		font-size: 1.25em;
 		font-weight: 400;
