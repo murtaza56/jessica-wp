@@ -81,7 +81,9 @@ function jessica_setup() {
 	include_once (get_stylesheet_directory() . '/shortcodes/shortcodes.php');
 
 	//* Widgets
-	include_once (get_stylesheet_directory() . '/widgets/widgets.php');
+	include_once (get_stylesheet_directory() . '/widgets/bulletin-widget.php');
+	include_once (get_stylesheet_directory() . '/widgets/icon-widget.php');
+	include_once (get_stylesheet_directory() . '/widgets/cta-widget.php');
 
 	//* Title & Logo
 	remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
