@@ -51,7 +51,7 @@ class Homepage_Icon extends WP_Widget {
 		echo '<p>';
 		echo '	<label for="' . $this->get_field_id( 'icon_widget_fa' ) . '" class="icon_widget_fa_label">' . __( 'Icon', 'jessica' ) . '</label>';
 		echo '	<input type="text" id="' . $this->get_field_id( 'icon_widget_fa' ) . '" name="' . $this->get_field_name( 'icon_widget_fa' ) . '" class="widefat" placeholder="' . esc_attr__( '', 'jessica' ) . '" value="' . esc_attr( $icon_widget_fa ) . '">';
-		echo '	<span class="description">' . __( 'Example: fa-heart - Find an icon on fontawesome.io/icons', 'jessica' ) . '</span>';
+		echo '	<span class="description">' . __( 'Ex: fa-heart - Find an icon on <a href="http://fontawesome.io/icons/" target="_blank">fontawesome.io</a>', 'jessica' ) . '</span>';
 		echo '</p>';
 		echo '<p>';
 		echo '	<label for="' . $this->get_field_id( 'icon_widget_textarea' ) . '" class="icon_widget_textarea_label">' . __( 'Content', 'jessica' ) . '</label>';

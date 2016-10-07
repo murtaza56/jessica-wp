@@ -13,7 +13,7 @@ class Call_to_Action extends WP_Widget {
 			'calltoaction',
 			__( 'Homepage Call to Action', 'jessica' ),
 			array(
-				'description' => __( 'Add a Call to Action to the Homepage.', 'jessica' ),
+				'description' => __( 'Add a Call to Action to the homepage.', 'jessica' ),
 				'classname'   => 'call-to-action',
 			)
 		);
